@@ -1,0 +1,6 @@
+{
+  "name": "AI Vocabulary Flashcards",
+  "description": "An application to help you learn new vocabulary. Add words and let AI generate custom, memorable images for each one, then study them using interactive flashcards.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

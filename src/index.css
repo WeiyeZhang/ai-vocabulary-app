@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, .theme-dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 215 27.9% 16.9%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 231.2 86.8% 57.8%; /* indigo-600 */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 263.4 70% 50.4%; /* purple */
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 20.3% 26.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 231.2 86.8% 57.8%;
+    --radius: 0.75rem;
+  }
+
+  .theme-light {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 231.2 86.8% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 263.4 70% 50.4%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 231.2 86.8% 57.8%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+
+@layer components {
+  /* Simple fade-in animation for UI elements */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+}
